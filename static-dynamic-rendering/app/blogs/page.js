@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 const Blogs = () => {
   console.log('Blogs Page');
   return (

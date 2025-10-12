@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos/");
+  const data = await res.json();
+  console.log(data);
+  return data.map(({ id }) => ({ blogID: id.toString() }));
+}
+
 const Blogs = async ({ params }) => {
   const { blogID } = await params;
   console.log(blogID);
