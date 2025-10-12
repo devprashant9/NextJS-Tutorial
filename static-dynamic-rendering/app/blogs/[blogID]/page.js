@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const dynamicParams = false;
+export const revalidate = 5;
 
 export async function generateStaticParams() {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos/");
@@ -40,6 +41,7 @@ const Blogs = async ({ params }) => {
       </nav>
       <div>
         <h1>Welcome to Our Blog {blogID}</h1>
+        <h2>{new Date().toLocaleString()}</h2>
         <p>This is blog {blogID} page.</p>
       </div>
     </>
