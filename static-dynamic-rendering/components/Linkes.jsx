@@ -1,12 +1,18 @@
-import React from 'react'
+"use client";
 
-const Linkes = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 6000));
+import { useState } from "react";
+
+const Linkes = () => {
+  const [likes, setLikes] = useState(2000);
+  if (typeof localStorage !== "undefined") {
+    console.log(localStorage);
+  }
   return (
     <div>
-      2K Likes
+      {likes} Likes
+      <button onClick={() => setLikes(likes + 1)}>Click</button>
     </div>
-  )
-}
+  );
+};
 
-export default Linkes
+export default Linkes;
