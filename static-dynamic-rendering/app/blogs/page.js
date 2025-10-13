@@ -1,4 +1,8 @@
+import Comments from "@/components/Comments";
+import Linkes from "@/components/Linkes";
+import Views from "@/components/Views";
 import Link from "next/link";
+import { Suspense } from "react";
 
 
 const Blogs = () => {
@@ -42,6 +46,17 @@ const Blogs = () => {
             <Link href="/blogs/3">Blog 3</Link>
           </li>
         </ol>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Views />
+        </Suspense>
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <Linkes />
+          </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Comments />
+        </Suspense>
+        
       </div>
     </>
   );

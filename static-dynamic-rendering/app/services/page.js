@@ -3,7 +3,7 @@ import Link from "next/link";
 export const dynamic = 'force-dynamic'; // method 1
 
 // Multiple Methods
-// when we use searchParams or cookies
+// when we use searchParams (need to use await then it works) or cookies
 // more on nextjs.org
 
 const Services = () => {
