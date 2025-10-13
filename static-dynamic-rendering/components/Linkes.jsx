@@ -11,6 +11,7 @@ const Linkes = () => {
     <div>
       {likes} Likes
       <button onClick={() => setLikes(likes + 1)}>Click</button>
+      <h2>{Date.now()}</h2>
     </div>
   );
 };
