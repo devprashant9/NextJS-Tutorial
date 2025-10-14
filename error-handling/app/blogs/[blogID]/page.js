@@ -1,8 +1,12 @@
 const Blog = async ({ params }) => {
   const { blogID } = await params;
 
-  if(blogID % 2 === 0) {
-    throw new Error("Page Can Be Odd Number Only")
+  // if(blogID % 2 === 0) {
+  //   throw new Error("Page Can Be Odd Number Only")
+  // }
+
+  if(Math.random() > 0.5) {
+    throw new Error("Something Went Wrong")
   }
 
   return (
