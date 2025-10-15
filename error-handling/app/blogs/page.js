@@ -2,6 +2,13 @@ import Link from "next/link";
 
 const Blogs = () => {
   console.log("Blogs Page");
+  // if(blogID % 2 === 0) {
+  //   throw new Error("Page Can Be Odd Number Only")
+  // }
+
+  // if (Math.random() > 0.5) {
+  //   throw new Error("Something Went Wrong")
+  // }
   return (
     <>
       <div>
